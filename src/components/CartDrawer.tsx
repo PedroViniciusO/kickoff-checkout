@@ -8,7 +8,7 @@ import {
   SheetTitle,
   SheetDescription,
 } from "@/components/ui/sheet";
-import { sanitizeInput } from "@/lib/security";
+import { sanitizeTextForTransport } from "@/lib/security";
 import type { CartItem } from "@/lib/cart-store";
 
 interface CartDrawerProps {
@@ -22,13 +22,17 @@ interface CartDrawerProps {
 
 const WHATSAPP_NUMBER = "5511999999999";
 const MAX_CART_ITEM_QTY = 99;
-const CHECKOUT_COOLDOWN_MS = 3000;
+const CHECKOUT_COOLDOWN_MS = 300;
 
 function buildWhatsAppUrl(items: CartItem[], total: number): string {
-  const lines = items.map(
-    (i) =>
-      `${i.quantity}x ${sanitizeInput(i.name)} - R$ ${(i.price * i.quantity).toFixed(2).replace(".", ",")}`
-  );
+  const lines = items.map((item) => {
+    const quantity = Math.max(1, Math.min(MAX_CART_ITEM_QTY, item.quantity));
+    const name = sanitizeTextForTransport(item.name);
+    const subtotal = (item.price * quantity).toFixed(2).replace(".", ",");
+
+    return `${quantity}x ${name} - R$ ${subtotal}`;
+  });
+
   const message = `Olá! Gostaria de finalizar a compra dos seguintes itens:\n\n${lines.join("\n")}\n\nTotal: R$ ${total.toFixed(2).replace(".", ",")}\n\nAguardo instruções para pagamento!`;
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
@@ -46,8 +50,9 @@ export function CartDrawer({
 
   const handleCheckout = useCallback(() => {
     if (isEmpty) return;
+
     const now = Date.now();
-    if (now - lastCheckout.current < CHECKOUT_COOLDOWN_MS) return;
+    if (now - lastCheckout.current <= CHECKOUT_COOLDOWN_MS) return;
     lastCheckout.current = now;
 
     const url = buildWhatsAppUrl(items, total);
@@ -73,7 +78,7 @@ export function CartDrawer({
             >
               <img
                 src={item.image}
-                alt={sanitizeInput(item.name)}
+                alt={item.name}
                 className="w-16 h-16 rounded-md object-cover shrink-0"
               />
               <div className="flex-1 min-w-0">

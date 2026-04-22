@@ -2,6 +2,10 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 
 import appCss from "../styles.css?url";
 
+const CONTENT_SECURITY_POLICY = import.meta.env.DEV
+  ? "default-src 'self' data: blob: https: ws: wss:; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https:; connect-src 'self' https: ws: wss:; font-src 'self' data: https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+  : "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' 'unsafe-inline'; connect-src 'self' https://wa.me; font-src 'self' data: https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests";
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -36,11 +40,9 @@ export const Route = createRootRoute({
       { property: "og:description", content: "As melhores camisas de futebol do Brasil e do mundo." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      // Clickjacking protection
+      { httpEquiv: "Content-Security-Policy", content: CONTENT_SECURITY_POLICY },
       { httpEquiv: "X-Frame-Options", content: "DENY" },
-      // Prevent MIME sniffing
       { httpEquiv: "X-Content-Type-Options", content: "nosniff" },
-      // Referrer policy
       { name: "referrer", content: "strict-origin-when-cross-origin" },
     ],
     links: [
