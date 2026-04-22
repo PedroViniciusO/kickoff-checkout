@@ -1,5 +1,6 @@
 import { ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useDebounceClick } from "@/hooks/use-debounce-click";
 import type { Product } from "@/lib/cart-store";
 
 interface ProductCardProps {
@@ -8,6 +9,8 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, onAdd }: ProductCardProps) {
+  const handleAdd = useDebounceClick(() => onAdd(product), 800);
+
   return (
     <div className="group bg-card rounded-xl border border-border overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
       <div className="aspect-square overflow-hidden bg-secondary">
@@ -37,7 +40,7 @@ export function ProductCard({ product, onAdd }: ProductCardProps) {
             variant="default"
             size="sm"
             className="shrink-0"
-            onClick={() => onAdd(product)}
+            onClick={handleAdd}
           >
             <ShoppingCart className="h-4 w-4 mr-1" />
             Adicionar

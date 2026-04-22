@@ -21,7 +21,7 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-sm mb-3 uppercase tracking-wider">Contato</h4>
             <ul className="space-y-2 text-sm text-background/70">
-              <li>contato@futstore.com.br</li>
+              <li>contato@lvstore.com.br</li>
               <li>(11) 99999-9999</li>
               <li className="flex items-center gap-1">
                 <MessageCircle className="h-4 w-4 text-whatsapp" />
@@ -50,13 +50,13 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-sm mb-3 uppercase tracking-wider">Redes Sociais</h4>
             <div className="flex gap-3">
-              <a href="#" className="h-9 w-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="#" rel="noopener noreferrer" className="h-9 w-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors" aria-label="Instagram">
                 <Instagram className="h-4 w-4" />
               </a>
-              <a href="#" className="h-9 w-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="#" rel="noopener noreferrer" className="h-9 w-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors" aria-label="Facebook">
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href="#" className="h-9 w-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="#" rel="noopener noreferrer" className="h-9 w-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors" aria-label="Twitter">
                 <Twitter className="h-4 w-4" />
               </a>
             </div>
