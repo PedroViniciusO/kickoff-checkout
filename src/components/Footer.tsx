@@ -1,4 +1,5 @@
-import { Shirt, Instagram, Facebook, Twitter, MessageCircle, ShieldCheck, Lock, Truck } from "lucide-react";
+import { Instagram, Facebook, Twitter, MessageCircle, ShieldCheck, Lock, Truck } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   return (
@@ -8,6 +9,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
+              <img src={logo} alt="LV Store" className="h-8 w-8 rounded-full object-cover" />
               <span className="font-extrabold text-lg">LV Store</span>
             </div>
             <p className="text-sm text-background/70 leading-relaxed">
