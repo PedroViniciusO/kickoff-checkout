@@ -13,9 +13,9 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "FutStore — Camisas de Futebol Premium" },
+      { title: "LV Store — Camisas de Futebol Premium" },
       { name: "description", content: "As melhores camisas de futebol do Brasil e do mundo. Brasileirão, Seleções, Ligas Europeias e Retrô. Compre pelo WhatsApp!" },
-      { property: "og:title", content: "FutStore — Camisas de Futebol Premium" },
+      { property: "og:title", content: "LV Store — Camisas de Futebol Premium" },
       { property: "og:description", content: "As melhores camisas de futebol do Brasil e do mundo. Compre pelo WhatsApp!" },
     ],
   }),
