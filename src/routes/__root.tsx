@@ -37,14 +37,9 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       // Clickjacking protection
-      { "http-equiv": "X-Frame-Options", content: "DENY" },
-      // CSP — allows only same-origin resources, inline styles for Tailwind, and images from trusted sources
-      {
-        "http-equiv": "Content-Security-Policy",
-        content: "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://images.unsplash.com; font-src 'self'; connect-src 'self' https://wa.me; frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
-      },
+      { httpEquiv: "X-Frame-Options", content: "DENY" },
       // Prevent MIME sniffing
-      { "http-equiv": "X-Content-Type-Options", content: "nosniff" },
+      { httpEquiv: "X-Content-Type-Options", content: "nosniff" },
       // Referrer policy
       { name: "referrer", content: "strict-origin-when-cross-origin" },
     ],
