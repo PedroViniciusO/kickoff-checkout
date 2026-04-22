@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroBanner from "@/assets/hero-banner.jpg";
+import heroBanner from "@/assets/hero-banner.png";
 
 export function HeroSection() {
   const scrollToProducts = () => {
