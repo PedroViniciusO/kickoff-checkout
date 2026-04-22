@@ -8,8 +8,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Shirt className="h-6 w-6 text-primary" />
-              <span className="font-extrabold text-lg">FutStore</span>
+              <span className="font-extrabold text-lg">LV Store</span>
             </div>
             <p className="text-sm text-background/70 leading-relaxed">
               As melhores camisas de futebol do Brasil e do mundo com qualidade premium e entrega rápida.
@@ -63,7 +62,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-background/10 text-center text-xs text-background/50">
-          © 2025 FutStore. Todos os direitos reservados.
+          © 2025 LV Store. Todos os direitos reservados.
         </div>
       </div>
     </footer>

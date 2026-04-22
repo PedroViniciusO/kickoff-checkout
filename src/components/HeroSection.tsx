@@ -32,7 +32,7 @@ export function HeroSection() {
           className="mt-8 px-10 py-6 text-lg"
           onClick={scrollToProducts}
         >
-          Ver Lançamentos
+          Ver Camisas
         </Button>
       </div>
     </section>
