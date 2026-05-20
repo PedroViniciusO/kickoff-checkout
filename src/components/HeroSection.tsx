@@ -7,14 +7,14 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative flex items-center justify-center overflow-hidden bg-black w-full aspect-[1920/896] max-h-[85vh]">
+    <section className="relative h-[85vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden bg-black">
       {/* Background */}
       <img
         src={heroBanner}
         alt="Camisas de futebol no vestiário"
         width={1920}
         height={896}
-        className="absolute inset-0 w-full h-full object-contain"
+        className="absolute inset-0 w-full h-full object-cover object-center"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
 
