@@ -7,16 +7,16 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative h-[85vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+    <section className="relative flex items-center justify-center overflow-hidden bg-black w-full aspect-[1920/896] max-h-[85vh]">
       {/* Background */}
       <img
         src={heroBanner}
-        alt="Torcida vibrando no estádio"
+        alt="Camisas de futebol no vestiário"
         width={1920}
         height={896}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-contain"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
