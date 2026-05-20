@@ -1,6 +1,11 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+.font-sport {
+  font-family: "Anton", "Bebas Neue", "Oswald", "Impact", sans-serif;
+}
 
 @custom-variant dark (&:is(.dark *));
 
