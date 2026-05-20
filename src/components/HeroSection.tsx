@@ -16,7 +16,7 @@ export function HeroSection() {
         height={896}
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/40 to-foreground/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
