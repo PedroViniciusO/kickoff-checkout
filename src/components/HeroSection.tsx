@@ -43,9 +43,6 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto py-20">
-        <span className="inline-block mb-6 px-4 py-1.5 rounded-full border border-primary/40 bg-primary/10 text-primary text-xs font-bold tracking-[0.25em] uppercase">
-          Coleção Premium 25/26
-        </span>
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight text-white leading-[1.05] uppercase">
           Vista a{" "}
           <span className="bg-gradient-to-r from-primary via-emerald-400 to-primary bg-clip-text text-transparent">
