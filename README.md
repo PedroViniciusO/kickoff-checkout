@@ -19,7 +19,7 @@ Vite (Se aplicável): Ferramenta de build e desenvolvimento local rápido.
 💻 Como Rodar o Projeto Localmente
 Para clonar e executar este projeto na sua máquina, siga os passos abaixo:
 # 1. Clone o repositório
-git clone https://github.com/PedroViniciusO/NOME_DO_REPOSITORIO.git
+git clone https://github.com/PedroViniciusO/kickoff-checkout.git
 
 # 2. Acesse a pasta do projeto
 cd kickoff-checkout
