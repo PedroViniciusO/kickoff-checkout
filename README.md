@@ -37,6 +37,7 @@ yarn dev
 Após executar o comando acima, o terminal mostrará o link (geralmente http://localhost:5173) onde a aplicação estará rodando. Basta clicar ou colar no navegador.
 
 🎯 Objetivos do Projeto
+
 Este projeto foi desenvolvido com foco em:
 
 Praticar a arquitetura de componentes reutilizáveis no Front-end.
